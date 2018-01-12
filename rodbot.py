@@ -3,7 +3,7 @@ import os
 linkedin = 'https://www.linkedin.com/in/rodcoelho/'
 github = 'https://github.com/rodcoelho'
 new = 2
-
+print("...LOADING BOT...")
 from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
 chatterbot = ChatBot(
     'RodBot',
@@ -42,9 +42,8 @@ def openwebsite(link):
 def clearmemory():
     os.system('rm database.sqlite3')
     os.system('clear')
-
-
-
+print("\n\nBot is ready")
+print("Say something to Bot: ")
 while True:
     try:
         bot_input = chatterbot.get_response(None)
